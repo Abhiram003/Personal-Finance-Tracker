@@ -1,0 +1,144 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow: auto;
+    max-height: 90%;
+    margin: 20px;
+    position: relative;
+}
+
+.auth, .dashboard {
+    display: none;
+}
+
+.auth.active, .dashboard.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #2c2c2c;
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #00ff00;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #00cc00;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#transactions {
+    margin: 20px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#transactions::-webkit-scrollbar {
+    width: 8px;
+}
+
+#transactions::-webkit-scrollbar-track {
+    background: #2c2c2c;
+    border-radius: 5px;
+}
+
+#transactions::-webkit-scrollbar-thumb {
+    background: #00ffff;
+    border-radius: 5px;
+}
+
+#transactions div {
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    border-left: 5px solid;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+#transactions div.income {
+    border-color: #00ff00;
+    background-color: #003300;
+}
+
+#transactions div.expense {
+    border-color: #ff0000;
+    background-color: #330000;
+}
+
+canvas {
+    margin-top: 20px;
+}
+
+.credentials-info {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #00ffff;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        max-height: 95%;
+        padding: 10px;
+    }
+
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .credentials-info {
+        font-size: 12px;
+    }
+}
